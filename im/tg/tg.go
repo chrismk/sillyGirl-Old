@@ -45,7 +45,7 @@ var Handler = func(message *tb.Message) {
 
 func buildHttpTransportWithProxy() {
 	addr := tg.Get("http_proxy")
-	if strings.Contains(addr, "https://") {
+	if strings.Contains(addr, "http://") {
 		if addr != "" {
 			u, err := url.Parse(addr)
 			if err != nil {
